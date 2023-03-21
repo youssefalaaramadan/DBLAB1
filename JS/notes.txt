@@ -1,0 +1,42 @@
+variable (box in memory)
+const / let (block scope), var (global scope)
+//* Arrays (dense)    .length typeof.     get by index safe                add by index not safe
+(assosiative) 
+push  add elements in array  (arr.push(100))      unshift--> (arr.unshift(5))   add in the begining   
+array splice ---> add,rem,choose index to add   (arr.splice(index, 0,15))  (index,deletecount,addedelement)
+deleting :  pop arr.pop= delete at end      shift arr.shift= delete at start
+slice(start,end) --> end not included      (cut part from array without affecting the original array)
+reverse (1,2,3)  ---> (3,2,1)
+callback 
+sort --> not ascending   (arr.sort(function(a,b){return a-b}))
+filter: array.filter(function(i){
+    return i%2 === 0 ;})
+    reduce: same sytax as filter  array.reduce(function(sum,element))       (for adding any mathematical for array(bahawelo le rakm wahed))
+map:  map.length change shape of array(sum, every concat , join , indexof , tostring)
+Numbers
+y.valueof  (type of object)
+num.toFixed(2(1.54))    ROundup and returns string
+num.toPrecision(2(1.5))  round and return string
+Number.isInteger(x) true or false
+Number.isFinite(x) true of false
+Number.isNan(x)  true of false
+string
+typeof , valueOf 
+x.char.At(3)  in iti "i"     =butopposite x.indexOf 
+x.replace("@","$") from to
+x.substring(3,6) start to end   (string cut)
+x.slice(-3)  same as substring but can go reverse
+x.split(@)  iti@alex   into  iti  ,  alex    also converts to Arrays
+boolean
+b1 = true
+DATES
+var dt = new Date()
+get --> getting date and time from date object ^ console.log(dt.getDate()) or getMonth+1 getFullYear getDay+1 getTime also set.Date(2008)
+TO// date.toLocaleString("ar-EG")
+MATHS// Math.PI=3.14   Math.sqrt(25)=5   Math.max(12,6)=12   min also 
+Math.random()*10    + Math.round(random)                     Maths.floor(1.5)=1  Maths.ceil(1.5)=2
+Regular Expressions// 
+//^ var reg = /pattern/modifier
+//^ var reg = new RegExp("pattern","modifier")
+i--> case insensive  g--> global(hamshy 3al string kolo)  m-->multiple line(law aktar men line hamshy 3lehom kolhom)
+. -->any character ^-->start  $-->end
