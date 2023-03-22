@@ -1,12 +1,12 @@
-var name = /^[A-Za-z]+$/;
-var age = /^[0-9]{<2010}$/;
+var nm = /^[a-z]+$/;
+var ph = /^[0-2010]{4}$/;
+do{
+    var namee = prompt("Enter your name")
+}while(! namee.match(nm));
 
 do{
-     var namee = prompt("enter your name?");
-}while(! namee.match (name));
-do{
-    var agee = prompt("enter your birth year");
-}while(! agee.match (age));
-var x = 2023-agee;
-console.log(namee,agee,x);
-document.write("Name= " + namee , <br> "Birth Date= " + agee , <br> "Age= " + x );
+    var phone = prompt("Enter your birth year")
+}while( phone.match(ph));
+console.log(namee,phone);
+var age = 2023 - phone;
+document.write("name= " + namee,"<br>", " Birth date = " + phone,"<br>" + " Age = " + age);

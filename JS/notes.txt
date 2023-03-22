@@ -40,3 +40,6 @@ Regular Expressions//
 //^ var reg = new RegExp("pattern","modifier")
 i--> case insensive  g--> global(hamshy 3al string kolo)  m-->multiple line(law aktar men line hamshy 3lehom kolhom)
 . -->any character ^-->start  $-->end
+//Hoisting 
+doms: getElementById/TagName/ClassName
+search on events of js
