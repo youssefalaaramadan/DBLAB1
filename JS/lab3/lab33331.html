@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Campatible" content="ie=edge">
+    <title>To-Do List</title>
+<head>
+<link rel="stylesheet" href="lab3t1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <div id="newtask">
+        <input type="text" placeholder="Enter your tasks here">
+        <button id="push" >Add</button>
+    </div>
+    <div id="tasks">
+
+    </div>
+</div>
+    <script type="text/javascript">
+        document.querySelector('#push').onclick = function() {
+    if(document.querySelector('#newtask input').value.length == 0){alert("Enter input")}
+    else{
+        document.querySelector('#tasks').innerHTML += `
+        <div class="task">
+        <span id="taskname">
+            ${document.querySelector('#newtask input').value}
+            </span>
+            <button class="delete">Delete
+            <i class="far fa-trash-all"></i>
+        
+            `; 
+        var current_tasks = document.querySelectorAll(".delete");
+        for(var i=0; i<current_tasks.length; i++){
+            current_tasks[i].onclick = function(){
+                this.parentNode.remove();
+            }
+        }
+    }
+}
+    </script>
+
+</body>
+
+</html>
