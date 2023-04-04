@@ -19,7 +19,7 @@ echo '</tr>';
 foreach($students as $info){
     echo '<tr>';
     foreach($info as $val){
-  if($students['status'] = "CMS")  {
+  if($info['status'] == "CMS")  {
 echo '<td style="color: red;">' . $val . '</td>';
   }
 else
