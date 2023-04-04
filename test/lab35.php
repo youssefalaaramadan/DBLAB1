@@ -42,11 +42,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $gender = test_input($_POST["gender"]);
   }
-  if (empty($_POST["courses"])) {
-    $courses = "";
-  } else {
-    $courses = test_input($_POST["courses"]);
-  }
+  //*if (empty($_POST["courses"])) {
+  //*  $courses = "";
+  //*} else {
+  //  $courses = test_input($_POST["courses"]);
+  //}
+  $values = $_POST['courses'];
+
+
 }
 
 function test_input($data) {
@@ -77,7 +80,7 @@ function test_input($data) {
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
   <label for="courses">Select Courses:</label>
-<select name="courses" multiple>
+<select name="courses[ ]" multiple>
   <option value="PHP">PHP</option>
   <option value="Java Script">Java Script</option>
   <option value="MySQL">MySQL</option>
@@ -102,7 +105,10 @@ echo "Class details:".$comment;
 echo "<br>";
 echo "Gender:".$gender;
 echo "<br>";
-echo "Your courses are:".$courses;
+foreach ($values as $a){
+    echo "Your courses are:" .$a;
+}
+
 ?>
 
 </body>
